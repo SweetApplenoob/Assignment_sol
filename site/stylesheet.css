@@ -1,11 +1,10 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    font-family: "Times New Roman", Times, serif;
-
-    
-    
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+   
     /* base style */
 
 p{
@@ -16,8 +15,7 @@ p{
 h2{
     border-left: 1px solid black;
     border-bottom: 1px solid black;
-    width: 90px;
-    margin: 0;
+    width: auto;
     background-color: #6ad2d2;
     position: absolute;
     top:0;
@@ -25,81 +23,144 @@ h2{
 }
 
 h1{ text-align: center;
-    /* font-size: 75% ; */
+    margin-top: 20px;
 }
-
-
-/* div{
-    border: 1px solid black;
-    width:25%;
-    float: left;
-    margin: 1px;
-    padding: 10px;
-    /* overflow: auto; */
-    /* position: relative; */
-    /* text-align:left; */
-
-   
   
 div.orange{
-    background-color: orange;
     position: relative;
+    border: 1px solid black;
+    background-color: #a95954;
+    margin-bottom: 15px;
 }
 
 div.white{
     position: relative;
+    border: 1px solid black;
     background-color: lightpink;
-    
+    margin-bottom: 15px;
 }
 
 div.green{
-    background-color: green;
     position: relative;
+    border: 1px solid black;
+    background-color: green;
+    margin-bottom: 15px;
+}
+
+
+    /* this is the outer first div */
+
+#container {
+    position: relative;
+   
+    /* width: 100%; */
+    /* height: auto; */
+    /* border: 2px solid #24247a;*/
+    /* background-color: rgb(157, 145, 145); */
 }
 
 
     /* for desktop view  */
     
 @media(min-width: 992px) { 
-     div{
-         width: 33%;
-         border: 1px solid black;
+      div.orange,div.white,div.green{
+         width: 30%;
          float: left;
-         margin-left: 2px;
-         margin-right: 1px;
+         margin: 45px 15px 15px;
          padding: 10px;
-        }
+         height: auto;
+        } 
 }
 
     /* for tablet view  */
 
 @media (min-width: 768px) and (max-width: 991px){
-    .orange,.white{
-        width:49% ;
-        margin-right: 6px;
-        margin-left: 1px;
-
+    div.orange,div.white{
+        width:47%;
+       
+        /* margin-right: 6px;
+        margin-left: 1px; 
+        margin: 45px 15px 15px; */
     }
-    .green{
-        width: 99%;
-        margin-top: 4px;
-        margin-left: 1px;
-     }
     
-    div{float: left;
-        border: 1px solid black;
+    div.orange{
+        
+        position: absolute;
+        top: 30px;
+        left: 15px;
+    }
+  
+    div.white{
+        position: absolute;
+        top: 30px;
+        right: 15px;
+    }
+    
+    div.green{
+        position: absolute;
+        margin-top: 18px;
+        top: 260px;
+        left: 15px;
+        right: 15px;
     }
 }
+    
+    /* div.green{
+        position: absolute;
+        /* width: 97%; */
+        /* margin-top: 18px;
+        margin-left: 15px; 
+        top: 260px;
+        margin: 15px;*/
+        /* clear: both; */
+  /*  }    i used it before and it looks perfect until i shortened my paragraph .it's width become short. */
 
+
+     
+  
     /* for mobile view  */
 
 @media(max-width:767px){
     .orange,.white,.green{
-        border: 1px solid black;
-        width: 100%;
-        float: left;
-        margin-bottom: 4px;
-    
+        margin: 15px; 
+     }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* div.orange{float: left;
 }
+div.white{float: right;}
+/* no position absolute; */
+
+
+
+/* in this case if we decrease our content then it will be shrink as the width is not specified so we have to use left , right of position absolute so that width will be same no mattter how short or long the paragrahp is .(as done above is best method as per my observation) */
+
+/* div.green{
+    position: absolute;
+    /* width: 97%; */
+    /* margin-top: 18px;
+    margin-left: 15px; */
+  /*  top: 260px;
+    margin: 15px;
+     clear: both; 
+} */
+    
+     
+
     
