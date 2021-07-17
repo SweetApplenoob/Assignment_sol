@@ -1,0 +1,37 @@
+h1{
+    margin-bottom: 20px;
+}
+.navbar{
+    border-radius: 0;
+    }
+.navbar-header .navbar-brand{
+    font-size: 2em;
+}
+.navbar-inverse .navbar-header .navbar-toggle  .icon-bar{
+    background-color:#ddba8d ;
+    border: 1px solid #ddba8d;
+}
+#nav-menu a{
+    background-color: #ddba8d;
+    text-align: center;
+    color: black;
+    font-size: 1.4em;
+}
+#nav-menu li{
+    border: 1px solid black;
+}
+.container .row div{
+    border: 1px solid black;
+    background-color: lightpink;
+    margin-bottom: 30px ;
+
+}    
+
+
+/* media query for the mobile version  */
+
+@media (max-width:768px){
+    .row{
+        margin: 0;
+    }
+}
